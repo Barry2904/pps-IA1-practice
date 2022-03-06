@@ -1,0 +1,22 @@
+Breakpoint 1, main () at p1final.c:3
+3   {
+(gdb) n
+5     printf("Enter first number:- ");
+(gdb) n
+6     scanf("%d",&a);
+(gdb) n
+Enter first number:- 5
+7     printf("Enter second number:- ");
+(gdb) n
+8     scanf("%d",&b);
+(gdb) n
+Enter second number:- 6
+9     sum=a+b;
+(gdb) n
+10    printf("Addition of %d + %d = %d \n",a,b,sum);
+(gdb) n
+Addition of 5 + 6 = 11 
+11    return 0;
+(gdb) n
+12  
+}

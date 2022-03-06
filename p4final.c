@@ -6,11 +6,11 @@ int input_array_size()
   scanf("%d",&x);
   return x;
 }
-void input_array(int n,int a[n])
+void input_array(int n,int a[n]) //n=4
 {
   for(int i=0;i<n;i++)
   {
-    printf("Enter %dth number:- ",i);
+    printf("Enter %dth number:- ",i);//5, 10, 15, 20
     scanf("%d",&a[i]);
   }
 }
@@ -38,10 +38,10 @@ void out_put(int n, int a[n], int sum)
 int main()
 {
   int n,result;
-  n=input_array_size();
+  n=input_array_size(); 
   int a[n];
   input_array(n,a);
-  result=sum_n_arrays(n,a);
+  result=sum_n_arrays(n,a); 
   out_put(n,a,result);
   return 0;
 }

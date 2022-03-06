@@ -1,0 +1,21 @@
+(gdb) b main
+Breakpoint 1 at 0x772: file p2final.c, line 8.
+(gdb) r
+
+
+Breakpoint 1, main () at p2final.c:8
+8     k=input();
+(gdb) n
+Enter  number
+5
+9     l=input();
+(gdb) n
+Enter  number
+6
+10    sum=add(k,l);
+(gdb) n
+11    output(k,l,sum);
+(gdb) n
+12    return 0;
+(gdb) n
+13  }

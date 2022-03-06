@@ -1,0 +1,42 @@
+Breakpoint 1, main () at p8final.c:22
+22      n=input();
+(gdb) s
+input () at p8final.c:2
+2   float input(){
+(gdb) n
+4       printf("Please enter the number\n");
+(gdb) n
+Please enter the number
+5       scanf("%f",&n);
+(gdb) n
+5
+6       return n;
+(gdb) n
+7   }
+(gdb) n
+main () at p8final.c:24
+24      sqrt_result=my_sqrt(n);
+(gdb) s
+my_sqrt (n=5) at p8final.c:9
+9       float result=0;
+(gdb) n
+11      for(i=0.01;i*i<n;i=i+0.01);
+(gdb) n
+13              result=i;
+(gdb) n
+15      return result;
+(gdb) n
+16  }
+(gdb) n
+main () at p8final.c:25
+25      output(n,sqrt_result);
+(gdb) s
+output (n=5, sqrt_result=2.23999834) at p8final.c:18
+18      printf("The square root of %.2f is %.2f",n,sqrt_result);
+(gdb) n
+19  }
+(gdb) n
+main () at p8final.c:26
+26      return 0;
+(gdb) n
+27  }(gdb) 

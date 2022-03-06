@@ -2,9 +2,9 @@
 void input_two_string(char *a,char *b)
 {
   printf("Enter 1st string:- ");
-  scanf("%s",a);
+  scanf("%s",a); // bharath     a=[b,h,a,r,a,t,h]
   printf("Enter 2nd string:- ");
-  scanf("%s",b);
+  scanf("%s",b); //rohan   b=[]
 }
 int strcp(char *a,char *b)
 {
@@ -13,7 +13,7 @@ int strcp(char *a,char *b)
   {
 
   }
-  return a[i]-b[i];
+  return a[i]-b[i]; //i-o 
 }
 void output(char *a,char *b,int result)
 {

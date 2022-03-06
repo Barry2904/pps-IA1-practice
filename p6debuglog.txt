@@ -1,0 +1,70 @@
+Breakpoint 1, main () at p6original.c:26
+26      n=input();
+(gdb) s
+input () at p6original.c:2
+2   int input(){
+(gdb) n
+4       printf("Enter a number\n");
+(gdb) n
+Enter a number
+5       scanf("%d",&n);
+(gdb) 2
+Undefined command: "2".  Try "help".
+(gdb) n
+2
+6       return n;
+(gdb) n
+7   }
+(gdb) n
+main () at p6original.c:27
+27      total=sum(n);
+(gdb) s
+sum (n=2) at p6original.c:9
+9       int sum=0;
+(gdb) n
+10      for(int i=0;i<=n;i++){
+(gdb) n
+11          sum+=i;
+(gdb) p i 
+$1 = 0
+(gdb) n
+10      for(int i=0;i<=n;i++){
+(gdb) n
+11          sum+=i;
+(gdb) n
+10      for(int i=0;i<=n;i++){
+(gdb) n
+11          sum+=i;
+(gdb) p i
+$2 = 2
+(gdb) p sum
+$3 = 1
+(gdb) n
+10      for(int i=0;i<=n;i++){
+(gdb) n
+13      return sum;
+(gdb) n
+14  }
+(gdb) n
+main () at p6original.c:28
+28      output(n,total);
+(gdb) s
+output (n=2, total=3) at p6original.c:16
+16      printf("The sum of ");
+(gdb) n
+17      for(int i=1;i<n;i++){
+(gdb) n
+18          printf("%d+",i);
+(gdb) n
+17      for(int i=1;i<n;i++){
+(gdb) n
+20      printf("%d",n);
+(gdb) n
+21      printf(" is %d ", total);
+(gdb) n
+22  }
+(gdb) n
+main () at p6original.c:29
+29      return 0;
+(gdb) n
+30  }(gdb) 

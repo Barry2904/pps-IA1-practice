@@ -1,0 +1,92 @@
+ gcc -g p4original.c
+ gdb ./a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from ./a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x802: file p4original.c, line 36.
+(gdb) r
+Starting program: /home/runner/pps-test1-Barry2904/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p4original.c:36
+36    a=input();
+(gdb) s
+input () at p4original.c:8
+8   {
+(gdb) n
+10    printf("Enter number:-");
+(gdb) n
+11    scanf("%d",&x);
+(gdb) n
+Enter number:-5
+12    return x;
+(gdb) n
+13  }
+(gdb) n
+main () at p4original.c:37
+37    b=input();
+(gdb) s
+input () at p4original.c:8
+8   {
+(gdb) n
+10    printf("Enter number:-");
+(gdb) n
+11    scanf("%d",&x);
+(gdb) n
+Enter number:-9
+12    return x;
+(gdb) n
+13  }
+(gdb) n
+main () at p4original.c:38
+38    c=input();
+(gdb) s
+input () at p4original.c:8
+8   {
+(gdb) n
+10    printf("Enter number:-");
+(gdb) n
+11    scanf("%d",&x);
+(gdb) n
+Enter number:-3
+12    return x;
+(gdb) n
+13  }
+(gdb) n
+main () at p4original.c:39
+39    large=cmp(a,b,c);
+(gdb) s
+cmp (a=5, b=9, c=3) at p4original.c:16
+16    if(a>b && a>c)
+(gdb) n
+20    else if(b>a && b>c)
+(gdb) n
+22      return b;
+(gdb) n
+28  }
+(gdb) n
+main () at p4original.c:40
+40    output(a,b,c,large);
+(gdb) s
+output (a=5, b=9, c=3, l=9) at p4original.c:31
+31    printf("%d is greatest among %d %d %d",l,a,b,c);
+(gdb) n
+32  }
+(gdb) n
+main () at p4original.c:41
+41    return 0;
+(gdb) n
+42  }(gdb) 

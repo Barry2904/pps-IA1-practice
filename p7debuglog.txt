@@ -1,0 +1,99 @@
+Breakpoint 1, main () at p7final.c:27
+27  int main(){
+(gdb) n
+30      n=array_size();
+(gdb) s
+array_size () at p7final.c:2
+2   int array_size(){
+(gdb) n
+4       printf("Enter the number of elements to be added\n");
+(gdb) n
+Enter the number of elements to be added
+5       scanf("%d",&n);
+(gdb) n
+3
+6       return n;
+(gdb) n
+7   }
+(gdb) n
+main () at p7final.c:31
+31      int a[n];
+(gdb) n
+32      input_array(n,a);
+(gdb) s
+input_array (n=3, a=0x7ffc708efd50) at p7final.c:9
+9       printf("Enter the numbers to be added\n");
+(gdb) n
+Enter the numbers to be added
+10      for(int i=0;i<n;i++){
+(gdb) n
+11          scanf("%d",&a[i]);
+(gdb) n
+1
+10      for(int i=0;i<n;i++){
+(gdb) n
+11          scanf("%d",&a[i]);
+(gdb) n
+2
+10      for(int i=0;i<n;i++){
+(gdb) n
+11          scanf("%d",&a[i]);
+(gdb) n
+3
+10      for(int i=0;i<n;i++){
+(gdb) n
+13  }
+(gdb) n
+main () at p7final.c:33
+33      sum=sum_n_arrays(n,a);
+(gdb) s
+sum_n_arrays (n=3, a=0x7ffc708efd50) at p7final.c:15
+15      int sum=0;
+(gdb) n
+16      for(int i=0;i<n;i++){
+(gdb) n
+17          sum+=a[i];
+(gdb) n
+16      for(int i=0;i<n;i++){
+(gdb) n
+17          sum+=a[i];
+(gdb) n
+16      for(int i=0;i<n;i++){
+(gdb) n
+17          sum+=a[i];
+(gdb) n
+16      for(int i=0;i<n;i++){
+(gdb) n
+19      return sum;
+(gdb) n
+20  }
+(gdb) n
+main () at p7final.c:34
+34      output(n,a,sum);
+(gdb) s
+output (n=3, a=0x7ffc708efd50, sum=6) at p7final.c:22
+22      printf("the sum of ");
+(gdb) n
+23      for(int i=0;i<n;i++){
+(gdb) n
+24      printf("%d ",a[i]);
+(gdb) n
+23      for(int i=0;i<n;i++){
+(gdb) n
+24      printf("%d ",a[i]);
+(gdb) n
+23      for(int i=0;i<n;i++){
+(gdb) n
+24      printf("%d ",a[i]);
+(gdb) n
+23      for(int i=0;i<n;i++){
+(gdb) n
+25      }printf("is %d",sum);
+(gdb) n
+26  }
+(gdb) n
+main () at p7final.c:35
+35      return 0;
+(gdb) n
+36  }
+(gdb) 

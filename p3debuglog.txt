@@ -1,0 +1,61 @@
+ gcc -g p3final.c
+ gdb ./a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from ./a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x7d6: file p3final.c, line 48.
+(gdb) r
+Starting program: /home/runner/pps-test1-Barry2904/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p3final.c:48
+48  {
+(gdb) n
+50    input(&a,&b);
+(gdb) s
+input (a=0x7ffcb3d099cc, b=0x7ffcb3d099d0) at p3final.c:34
+34    printf("Enter 1st number:- ");
+(gdb) n
+35    scanf("%d",a);
+(gdb) n
+Enter 1st number:- 4
+36    printf("Enter 2nd number:- ");
+(gdb) n
+37    scanf("%d",b);
+(gdb) n
+Enter 2nd number:- 5
+38  }
+(gdb) n
+main () at p3final.c:51
+51    add(a,b,&sum);
+(gdb) s
+add (a=4, b=5, sum=0x7ffcb3d099d4) at p3final.c:41
+41    *sum=a+b;
+(gdb) n
+42  }
+(gdb) n
+main () at p3final.c:52
+52    output(a,b,sum);
+(gdb) s
+output (a=4, b=5, sum=9) at p3final.c:45
+45    printf("%d + %d = %d",a,b,sum);
+(gdb) n
+46  }
+(gdb) n
+main () at p3final.c:53
+53    return 0;
+(gdb) n
+54  }(gdb) 
